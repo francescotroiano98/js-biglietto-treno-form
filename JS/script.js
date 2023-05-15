@@ -28,6 +28,7 @@ button.addEventListener("click", function(){
         alert("Hai inserito un valore non valido per l'età!");
         
       } else {
+        ticketprice;
       
         if (myage < 18) {
             ticketprice = ticketprice - ((ticketprice * 19.4) / 100);
@@ -35,10 +36,9 @@ button.addEventListener("click", function(){
             ticketprice = ticketprice - ((ticketprice * 37.7) / 100);
         }
     
-    }
     document.getElementById("answer").innerHTML += "IL PREZZO E': " + ticketprice.toFixed(2) + " €" ;
-
-    console.log(ticketprice.toFixed(2));
+    
+  }
 })
 
 
