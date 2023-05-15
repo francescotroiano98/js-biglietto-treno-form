@@ -1,16 +1,8 @@
-const kilometri = parseInt(document.getElementById("mykm").value);
-
-console.log(kilometri);
-
-const myage =  parseInt(document.getElementById("myage").value);
-
-console.log(myage);
-
-let ticketprice = 0.233 * kilometri;
-
 const button = document.querySelector("button.mybutton")
 
 button.addEventListener("click", function(){
+    const kilometri = parseInt(document.getElementById("mykm").value);
+    const myage = parseInt(document.getElementById("myage").value);
 
     if (isNaN(kilometri) && isNaN(myage)) {
         document.getElementById("error").innerHTML = "Hai inserito un valore non valido per i kilometri e per l'età!";
@@ -28,7 +20,7 @@ button.addEventListener("click", function(){
         alert("Hai inserito un valore non valido per l'età!");
         
       } else {
-        ticketprice;
+       let ticketprice = 0.233 * kilometri;;
       
         if (myage < 18) {
             ticketprice = ticketprice - ((ticketprice * 19.4) / 100);
@@ -40,5 +32,7 @@ button.addEventListener("click", function(){
     
   }
 })
+
+
 
 
